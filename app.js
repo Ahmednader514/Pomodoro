@@ -58,7 +58,13 @@ function countdown() {
             secondes = 0;
         }
 
-        studieText.innerHTML = minutes + ":" + secondes;
+        if(secondes < 10) {
+            studieText.innerHTML = minutes + ":0" + secondes;
+        }
+
+        if(secondes > 10) {
+            studieText.innerHTML = minutes + ":" + secondes;
+        }
 
     }, 1000);
 
@@ -90,96 +96,109 @@ function countdown() {
 
 function countdown2() {
 
-  var myInterval2 = setInterval(function() {
+var myInterval2 = setInterval(function() {
 
-      secondes--;
+secondes--;
 
-      if(secondes === 0) {
-          minutes2--;
-          secondes = 59;
-      }
+if(secondes === 0) {
+    minutes2--;
+    secondes = 59;
+}
 
-      if(minutes2 === 0) {
-          
-          sound.play();
+if(minutes2 === 0) {
 
-          secondes = 0;
-      }
+    sound.play();
 
-      shortBreakText.innerHTML = minutes2 + ":" + secondes;
+    secondes = 0;
+}
 
-  }, 1000);
+    if(secondes < 10) {
+        shortBreakText.innerHTML = minutes2 + ":0" + secondes;
+    }
 
-  function stop2() {
+    if(secondes > 10) {
+        shortBreakText.innerHTML = minutes2 + ":" + secondes;
+    }
 
-      clearInterval(myInterval2);
-      sound.pause();
+}, 1000);
 
-  }
+function stop2() {
 
-  document.querySelector(".two .stop").addEventListener("click", stop2);
+    clearInterval(myInterval2);
+    sound.pause();
 
-  function reset2() {
+}
 
-      clearInterval(myInterval2)
+document.querySelector(".two .stop").addEventListener("click", stop2);
 
-      minutes2 = 5;
-      secondes = 60;
-      secondesDisplay = "00";
+function reset2() {
 
-      shortBreakText.innerHTML = minutes2 + ":" + secondesDisplay;
-      sound.pause();
-  
-  }
+    clearInterval(myInterval2)
 
-  document.querySelector(".two .reset").addEventListener("click", reset2);
+    minutes2 = 5;
+    secondes = 60;
+    secondesDisplay = "00";
+
+    shortBreakText.innerHTML = minutes2 + ":" + secondesDisplay;
+    sound.pause();
+
+}
+
+document.querySelector(".two .reset").addEventListener("click", reset2);
 
 }
 
 function countdown3() {
 
-  var myInterval3 = setInterval(function() {
+var myInterval3 = setInterval(function() {
 
-      secondes--;
+secondes--;
 
-      if(secondes === 0) {
-          minutes3--;
-          secondes = 59;
-      }
+if(secondes === 0) {
+    minutes3--;
+    secondes = 59;
+}
 
-      if(minutes3 === 0) {
-          
-          sound.play();
+if(minutes3 === 0) {
 
-          secondes = 0;
-      }
+    sound.play();
 
-      longBreakText.innerHTML = minutes3 + ":" + secondes;
+    secondes = 0;
 
-  }, 1000);
+}
 
-  function stop3() {
+if(secondes < 10) {
+    longBreakText.innerHTML = minutes3 + ":0" + secondes;
+}
 
-      clearInterval(myInterval3);
-      sound.pause();
+if(secondes > 10) {
+    longBreakText.innerHTML = minutes3 + ":" + secondes;
+}
 
-  }
+}, 1000);
 
-  document.querySelector(".three .stop").addEventListener("click", stop3);
+function stop3() {
 
-  function reset3() {
+    clearInterval(myInterval3);
+    sound.pause();
 
-      clearInterval(myInterval3)
+}
 
-      minutes3 = 30;
-      secondes = 60;
-      secondesDisplay = "00";
+document.querySelector(".three .stop").addEventListener("click", stop3);
 
-      longBreakText.innerHTML = minutes3 + ":" + secondesDisplay;
-      sound.pause();
-  
-  }
+function reset3() {
 
-  document.querySelector(".three .reset").addEventListener("click", reset3);
+    clearInterval(myInterval3)
+
+    minutes3 = 30;
+    secondes = 60;
+    secondesDisplay = "00";
+
+    longBreakText.innerHTML = minutes3 + ":" + secondesDisplay;
+    sound.pause();
+
+}
+
+document.querySelector(".three .reset").addEventListener("click", reset3);
 
 }

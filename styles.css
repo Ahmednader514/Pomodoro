@@ -37,13 +37,13 @@ body {
   transition: 0.2s;
 }
 
+.tabs li:first-child {
+  border-left: 0;
+}
+
 .tabs li:hover {
   background-color: rgb(50, 5, 2);
   color: white;
-}
-
-.tabs li:last-child {
-  border-right: 2px solid rgb(50, 5, 2);
 }
 
 .timer {
