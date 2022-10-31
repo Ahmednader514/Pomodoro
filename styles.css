@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
 
 body {
-  background: rgb(0,6,36);
+  background: rgb(108, 7, 1);
   color: white;
   font-family: 'Rubik', sans-serif;
 }
@@ -22,7 +22,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 0;
-  background: rgb(9,23,121);
+  background: rgb(72, 7, 4);
   padding: 25px 10px;
   text-align: center;
   border-radius: 10px 10px 0 0;
@@ -31,24 +31,24 @@ body {
 
 .tabs li {
   cursor: pointer;
-  border-left: 2px solid rgb(2, 9, 66);
+  border-left: 2px solid rgb(50, 5, 2);
   padding: 10px;
   text-align: center;
   transition: 0.2s;
 }
 
 .tabs li:hover {
-  background-color: rgb(2, 9, 66);
+  background-color: rgb(50, 5, 2);
   color: white;
 }
 
 .tabs li:last-child {
-  border-right: 2px solid rgb(2, 9, 66);
+  border-right: 2px solid rgb(50, 5, 2);
 }
 
 .timer {
   padding: 50px;
-  background-color: rgb(9,23,121);
+  background-color: rgb(72, 7, 4);
   text-align: center;
   border-radius: 0 0 10px 10px;
 }
@@ -59,18 +59,18 @@ body {
 }
 
 .timer button {
-  background-color: rgb(2, 9, 66);
+  background-color: rgb(85, 8, 2);
   color: white;
   border: 0;
   padding: 10px 20px;
   border-radius: 5px;
   margin: 10px;
   transition: 0.2s;
-  border: 2px solid rgb(2, 9, 66);
+  border: 2px solid rgb(69, 7, 3);
   font-family: 'Rubik', sans-serif;
 }
 
 .timer button:hover {
-  background-color: rgb(9,23,121);
-  border: 2px solid rgb(2, 9, 66);
+  background-color: rgb(95, 10, 5);
+  border: 2px solid rgb(69, 7, 3);
 }
